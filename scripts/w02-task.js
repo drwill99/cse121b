@@ -4,7 +4,7 @@
 
 /* Step 2 - Variables */
 
-let fullName = "Dallin Williams"
+const fullName = "Dallin Williams";
 
 let currentYear = Date
 
@@ -28,12 +28,10 @@ yearElement.innerHTML = `<strong>${currentYear}</strong>`;
 
 imageElement.setAttribute('src', profilePicture);
 
-
+imageElement.setAttribute('alt', "Snowboard Guy");
 
 /* Step 5 - Array */
 
+let foodArray = ['Steak', 'Chicken', 'Fresh Vegetables', 'Fruit'];
 
-
-
-
-
+foodElement.innerHTML = `<strong>${foodArray[4]}</strong>`;
