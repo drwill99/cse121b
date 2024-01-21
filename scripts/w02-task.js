@@ -1,37 +1,54 @@
-/* W02-Task - Profile Home Page */
+/* Lesson 2 */
 
-/* Step 1 - Setup type tasks - no code required */
+/* VARIABLES */
 
-/* Step 2 - Variables */
+// Step 1: declare and instantiate a variable to hold your name
+const myName = 'Dallin Williams';
 
-const fullName = "Dallin Williams";
+// Step 2: place the value of the name variable into the HTML file (hint: document.querySelector())
+document.querySelector('#name').textContent = myName;
 
-let currentYear = Date
+// Step 3: declare and instantiate a variable to hold the current year
+const currentYear = 2020;
 
-let profilePicture = images/mask.jpg
+// Step 4: place the value of the current year variable into the HTML file
+document.querySelector('#year').textContent = currentYear;
 
-/* Step 3 - Element Variables */
+// Step 5: declare and instantiate a variable to hold the name of your picture
+const myPicture = 'images/mask.jpg';
 
-const nameElement = document.getElementById('name');
+// Step 6: copy your image into the "images" folder
 
-const foodElement = document.getElementById('food');
+// Step 7: place the value of the picture variable into the HTML file (hint: document.querySelector().setAttribute())
+document.querySelector('img').setAttribute('src', myPicture);
 
-const yearElement = document.querySelector('#year');
 
-const imageElement = document.querySelector('#profile-image');
 
-/* Step 4 - Adding Content */
+/* ARRAYS */
 
-nameElement.innerHTML = `<strong>${fullName}</strong>`;
+// Step 1: declare and instantiate an array variable to hold your favorite foods
+const favoriteFoods = ['Cheeseburger', 'French Fries', 'Tacos', 'Pizza'];
 
-yearElement.innerHTML = `<strong>${currentYear}</strong>`;
+// Step 2: place the values of the favorite foods variable into the HTML file
+document.querySelector('#food').textContent = favoriteFoods;
 
-imageElement.setAttribute('src', profilePicture);
+// Step 3: declare and instantiate a variable to hold another favorite food
+const anotherFavoriteFood = 'Steak';
 
-imageElement.setAttribute('alt', "Snowboard Guy");
+// Step 4: add the variable holding another favorite food to the favorite food array
+favoriteFoods.push(anotherFavoriteFood);
 
-/* Step 5 - Array */
+// Step 5: repeat Step 2
+document.querySelector('#food').textContent = favoriteFoods;
 
-let foodArray = ['Steak', 'Chicken', 'Fresh Vegetables', 'Fruit'];
+// Step 6: remove the first element in the favorite foods array
+favoriteFoods.shift();
 
-foodElement.innerHTML = `<strong>${foodArray[4]}</strong>`;
+// Step 7: repeat Step 2
+document.querySelector('#food').textContent = favoriteFoods;
+
+// Step 8: remove the last element in the favorite foods array
+favoriteFoods.pop();
+
+// Step 7: repeat Step 2
+document.querySelector('#food').textContent = favoriteFoods;
