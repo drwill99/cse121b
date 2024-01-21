@@ -1,54 +1,40 @@
-/* Lesson 2 */
+/* W02-Task - Profile Home Page */
 
-/* VARIABLES */
+/* Step 1 - Setup type tasks - no code required */
 
-// Step 1: declare and instantiate a variable to hold your name
-const myName = 'Dallin Williams';
+/* Step 2 - Variables */
+const fullName = 'Dallin Williams';
+const Year = new Date();
+let currentYear = Year.getFullYear();
+let profilePicture = 'images/mask.jpg';
 
-// Step 2: place the value of the name variable into the HTML file (hint: document.querySelector())
-document.querySelector('#name').textContent = myName;
+/* Step 3 - Element Variables */
 
-// Step 3: declare and instantiate a variable to hold the current year
-const currentYear = 2020;
+const nameElement = document.getElementById('name');
+const foodElement = document.getElementById('food');
+const yearElement = document.querySelector('#year');
+const imageElement = document.querySelector('img');
 
-// Step 4: place the value of the current year variable into the HTML file
-document.querySelector('#year').textContent = currentYear;
+/* Step 4 - Adding Content */
 
-// Step 5: declare and instantiate a variable to hold the name of your picture
-const myPicture = 'images/mask.jpg';
+imageElement.setAttribute('src', `${profilePicture}`);
+nameElement.innerHTML = (`<strong>${fullName}</strong>`);
+yearElement.innerHTML = (`${currentYear}`);
+imageElement.setAttribute('alt', `${fullName}`);
 
-// Step 6: copy your image into the "images" folder
+/* Step 5 - Array */
 
-// Step 7: place the value of the picture variable into the HTML file (hint: document.querySelector().setAttribute())
-document.querySelector('img').setAttribute('src', myPicture);
+const favoriteFood = ['Pizza', 'Tacos', 'Burgers'];
 
+foodElement.innerHTML += `<br>${favoriteFood}`;
 
+const moreFood = 'Steak';
+favoriteFood.push(moreFood);
 
-/* ARRAYS */
+foodElement.innerHTML += `<br>${favoriteFood}`;
 
-// Step 1: declare and instantiate an array variable to hold your favorite foods
-const favoriteFoods = ['Cheeseburger', 'French Fries', 'Tacos', 'Pizza'];
+favoriteFood.shift();
+foodElement.innerHTML += `<br>${favoriteFood}`;
 
-// Step 2: place the values of the favorite foods variable into the HTML file
-document.querySelector('#food').textContent = favoriteFoods;
-
-// Step 3: declare and instantiate a variable to hold another favorite food
-const anotherFavoriteFood = 'Steak';
-
-// Step 4: add the variable holding another favorite food to the favorite food array
-favoriteFoods.push(anotherFavoriteFood);
-
-// Step 5: repeat Step 2
-document.querySelector('#food').textContent = favoriteFoods;
-
-// Step 6: remove the first element in the favorite foods array
-favoriteFoods.shift();
-
-// Step 7: repeat Step 2
-document.querySelector('#food').textContent = favoriteFoods;
-
-// Step 8: remove the last element in the favorite foods array
-favoriteFoods.pop();
-
-// Step 7: repeat Step 2
-document.querySelector('#food').textContent = favoriteFoods;
+favoriteFood.pop();
+foodElement.innerHTML += `<br>${favoriteFood}`;
