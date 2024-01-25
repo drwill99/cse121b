@@ -21,14 +21,11 @@ document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 
 /* Function Expression - Subtract Numbers */
 
-function subtract (number1, number2) {
-
+const subtract = function(number1, number2) {
     return number1 - number2;
-
 }
 
-function subtractNumbers() {
-
+const subtractNumbers = function() {
     let subtractNumber1 = Number(document.querySelector('#subtract1').value);
     let subtractNumber2 = Number(document.querySelector('#subtract2').value);
 
@@ -39,35 +36,29 @@ document.querySelector('#subtractNumbers').addEventListener('click', subtractNum
 
 /* Arrow Function - Multiply Numbers */
 
-function multiply (number1, number2) {
+const multiply = (number1, number2) => number1 * number2;
 
-    return number1 * number2;
-
-}
-
-function multiplyNumbers() {
-
-    let multiplyNumber1 = Number(document.querySelector('#multiply1').value);
-    let multiplyNumber2 = Number(document.querySelector('#multiply2').value);
+const multiplyNumbers = () => {
+    let multiplyNumber1 = Number(document.querySelector('#factor1').value);
+    let multiplyNumber2 = Number(document.querySelector('#factor2').value);
 
     document.querySelector('#product').value = multiply(multiplyNumber1, multiplyNumber2);
-
 }
 
 document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
 
 /* Open Function Use - Divide Numbers */
 
-function divide (number1, number2) {
+function divide (divideNumber1, divideNumber2) {
     
-        return number1 / number2;
+        return divideNumber1 / divideNumber2;
     
     }
     
 function divideNumbers() {
     
-        let divideNumber1 = Number(document.querySelector('#divide1').value);
-        let divideNumber2 = Number(document.querySelector('#divide2').value);
+        let divideNumber1 = Number(document.querySelector('#dividend').value);
+        let divideNumber2 = Number(document.querySelector('#divisor').value);
     
         document.querySelector('#quotient').value = divide(divideNumber1, divideNumber2);
     }
@@ -90,3 +81,19 @@ document.querySelector('#divideNumbers').addEventListener('click', divideNumbers
 /* Output Multiplied by 2 Array */
 
 /* Output Sum of Multiplied by 2 Array */
+
+/* Get Total Due Button Click Event */
+
+document.querySelector('#getTotal').addEventListener('click', function() {
+    let subtotal = Number(document.querySelector('#subtotal').value);
+    let membershipCheckbox = document.querySelector('#member').checked;
+    let total;
+
+    if (membershipCheckbox) {
+        total = subtotal * 0.8;
+    } else {
+        total = subtotal;
+    }
+
+    document.querySelector('#total').textContent = `Total Due: $${total.toFixed(2)}`;
+});
