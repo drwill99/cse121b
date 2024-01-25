@@ -67,20 +67,36 @@ document.querySelector('#divideNumbers').addEventListener('click', divideNumbers
 
 /* Decision Structure */
 
-
-
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
 
+let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+document.querySelector('#array').textContent = numbersArray;
+
 /* Output Odds Only Array */
+
+let oddsArray = numbersArray.filter(number => number % 2 === 1);
+document.querySelector('#odds').textContent = oddsArray;
 
 /* Output Evens Only Array */
 
+let evensArray = numbersArray.filter(number => number % 2 === 0);
+document.querySelector('#evens').textContent = evensArray;
+
 /* Output Sum of Org. Array */
+
+let sumOfArray = numbersArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+document.querySelector('#sumOfArray').textContent = sumOfArray;
 
 /* Output Multiplied by 2 Array */
 
+numbersArray.forEach((number, index) => numbersArray[index] = number * 2);
+document.querySelector('#multiplied').textContent = numbersArray;
+
 /* Output Sum of Multiplied by 2 Array */
+
+let sumOfMultipliedArray = numbersArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+document.querySelector('#sumOfMultiplied').textContent = sumOfMultipliedArray;
 
 /* Get Total Due Button Click Event */
 
