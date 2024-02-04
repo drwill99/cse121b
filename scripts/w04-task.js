@@ -48,7 +48,7 @@ document.querySelector('#photo').setAttribute('alt', myProfile.name);
 myProfile.favoriteFoods.forEach(function(food) {
     let li = document.createElement('li');
     li.textContent = food;
-    document.querySelector('#favoriteFoods').appendChild(li);
+    document.querySelector('#favorite-foods').appendChild(li);
 });
 
 /* Hobbies List */
@@ -66,6 +66,6 @@ myProfile.placesLived.forEach(function(place) {
     let dd = document.createElement('dd');
     dt.textContent = place.place;
     dd.textContent = place.length;
-    document.querySelector('#placesLived').appendChild(dt);
-    document.querySelector('#placesLived').appendChild(dd);
+    document.querySelector('#places-lived').appendChild(dt);
+    document.querySelector('#places-lived').appendChild(dd);
 });
