@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+  --blue: #003EA5;
+  --dark_blue: #022A8A;
+  --black: #000000;
+  --gray: #6c6c6c;
+}
+
+body {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  background-color: var(--black);
+  padding-bottom: 75px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#heroText h1 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  margin: 10px;
+  letter-spacing: 5px;
+}
+
+.show {
+  display: inline-block;
+  padding: 30px;
+  cursor: pointer;
+}
+
+button {
+  color: white;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 50px;
+  margin: 10px auto;
+  display: block;
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-left: 0;
+  background-color: var(--black);
+  width: 100%;
+  height: 50px;
+  border-top: solid var(--gray) 1px;
+  color: var(--gray);
+}
+
+footer p {
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  font-size: 12px;
+}
+
+#tmdb-logo {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  width: 100px;
+}
+
+#footer-logo {
+  position: relative;
+  bottom: 45px;
+  height: 150px;
+  margin-left: -50px;
+}
+
+#footer-logo:hover {
+  cursor: pointer;
+}
+
+input,
+button {
+  font-size: 16px;
+  font-family: 'Anton', sans-serif;
+}
+
+#user-input {
+  border: 2px solid var(--black);
+  width: 300px;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  margin: 10px auto;
+}
+
+#search-form {
+  margin: 30px 0;
+}
+
+.radio-button {
+    display: inline-block;
+    margin: 5px;
+}
+
+.radio-button label {
+  display: inline;
+  background-color: var(--dark_blue);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.radio-button input {
+  display: none;
+}
+
+.radio-button input:checked + label {
+  background: var(--blue);
+  border: solid white 3px;
+  border-radius: 5px;
+}
+
+.radio-button label {
+  cursor: pointer;
+  line-height: 50px;
+}
+
+.backdropImage {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.backdropImageGradient {
+  position: relative;
+  z-index: -1;
+}
+
+.backdropImageGradient::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0), var(--black));
+}
+
+#posterImage {
+  position: absolute;
+  left: 10%;
+  bottom: -30%;
+}
+
+#showHeader {
+  position: relative;
+  margin-bottom: 200px;
+}
+
+#title {
+  position: absolute;
+  text-align: left;
+  top: 101%;
+  left: calc(10% + 330px);
+  line-height: 1.5;
+}
+
+#flatrate,
+#rent,
+#buy {
+  background-image: radial-gradient(circle, var(--dark_blue), var(--black) 90%);
+  width: 90%;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+#heroImage {
+  height: 300px;
+}
+
+#heroGradient::after {
+  height: 300px;
+}
+
+#heroText {
+  width: 50%;
+  margin: -100px auto 15px;
+  padding: 20px;
+}
+
+.heroLogo {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    z-index: -1;
+}
+
+
+@media screen and (max-width: 850px) {
+  #posterImage {
+    position: static;
+    margin-top: -350px;
+  }
+
+  #title {
+    position: static;
+    margin: 15px 45px 45px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #showHeader {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #title {
+    margin: 20px;
+    font-size: 25px;
+  }
+}
