@@ -1,4 +1,4 @@
-import { getShowData } from 'scripts/services.js'
+import { getShowData } from './scripts/services.js'
 
 export default async function displayShows(showType, searchQuery) {
   removeResults()

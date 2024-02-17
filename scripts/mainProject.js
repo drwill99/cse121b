@@ -1,4 +1,4 @@
-import displayShows from 'scripts/displayResults.js'
+import displayShows from './scripts/displayResults.js'
 
 const searchForm = document.getElementById('search-form')
 searchForm.addEventListener('submit', (e) => {
