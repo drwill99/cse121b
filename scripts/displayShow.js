@@ -1,4 +1,4 @@
-import { getWatchProviders, getBackdropImage } from './scripts/services.js'
+import { getWatchProviders, getBackdropImage } from './services.js'
 
 const LOGO_IMAGE_URL = 'https://image.tmdb.org/t/p/original'
 const PARAMS = new Proxy(new URLSearchParams(window.location.search), {
